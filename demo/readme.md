@@ -1,41 +1,31 @@
 # Trabajo Práctico Integrador - API REST con Spring Boot
 
 **Asignatura:** Proyecto, diseño e implementación de sistemas computacionales  
-**Modalidad:** Individual / En parejas  
 **Tecnologías:** Java 21, Spring Boot 3, Spring Data JPA, Jakarta Validation, MySQL  
 
----
-
-## 1. Descripción del Proyecto
-API RESTful desarrollada para la gestión de un catálogo de **Productos**. Aplica una arquitectura estructurada por capas (Controller, Service, Repository, DTO y Entity) garantizando la separación de responsabilidades, la persistencia en base de datos MySQL y un manejo centralizado de validaciones y excepciones.
+##  Descripción del Proyecto
+API RESTful para la gestión de productos desarrollada aplicando una arquitectura por capas (Controller, Service, Repository, DTO y Entity) con persistencia en MySQL y validación centralizada de datos.
 
 ---
 
-## 2. Dominio y Atributos
-La entidad principal **Producto** posee los siguientes 6 atributos:
-* `id` (Long): Identificador único auto-generado.
-* `nombre` (String): Nombre del producto (Obligatorio).
-* `descripcion` (String): Detalle o especificación.
-* `precio` (BigDecimal): Precio unitario (Obligatorio, > 0).
-* `stock` (Integer): Cantidad disponible (Obligatorio, >= 0).
-* `categoria` (String): Rubro o categoría (Obligatorio).
+##  Requisitos Previos
+* **Java:** JDK 21 o superior
+* **Motor de Base de Datos:** MySQL (a través de XAMPP o servicio local)
+* **Gestor de Dependencias:** Maven
+* **Cliente de Pruebas:** Postman, Insomnia o cURL
 
 ---
 
-## 3. Requisitos de Configuración (`application.yaml`)
-El proyecto está configurado mediante `src/main/resources/application.yaml` para conectarse a MySQL mediante XAMPP:
+##  Configuración y Ejecución
 
-```yaml
-server:
-  port: 8080
+1. **Iniciar Base de Datos:**
+   Asegurarse de tener activo el servicio de MySQL (por ejemplo, desde el panel de XAMPP presionando *Start* en MySQL).
 
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/productos_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: root
-    password: ""
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+2. **Configuración de Conexión:**
+   La aplicación está configurada mediante `src/main/resources/application.yaml`. Se creará automáticamente la base de datos `productos_db` si no existe.
+
+3. **Ejecutar la Aplicación:**
+   Desde tu IDE (IntelliJ IDEA / Eclipse / VS Code), ejecutar la clase principal `com.example.demo.DemoApplication`.  
+   Alternativamente, desde la consola en la raíz del proyecto:
+   ```bash
+   ./mvnw spring-boot:run

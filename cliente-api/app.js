@@ -1,7 +1,6 @@
 // Alumno: Mateo Baraldi - Curso: 6to Año (Completar división)
 
-const API_URL = "http://localhost:8080/api/students";
-
+const API_URL = "https://cerso-2.onrender.com/api/students";
 // Estado local para filtrado y ordenamiento sin reconsultar la API
 let listaEstudiantes = [];
 let ordenActual = { columna: "id", ascendente: true };

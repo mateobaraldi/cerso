@@ -1,13 +1,13 @@
 /* Variables de paleta Negro y Rojo Carmesí */
 :root {
-    --bg-main: #0b0b0e;
-    --bg-card: #141419;
-    --bg-input: #1c1c24;
-    --bg-row-alt: #18181f;
-    --bg-row-hover: #241518;
+    --bg-main: #0b0b0ebd;
+    --bg-card: #141419b4;
+    --bg-input: #1c1c24b0;
+    --bg-row-alt: #18181fa4;
+    --bg-row-hover: #241518b6;
     
-    --crimson-primary: #e61938;
-    --crimson-hover: #ff2445;
+    --crimson-primary: #9b182cc7;
+    --crimson-hover: #dd3b53;
     --crimson-glow: rgba(230, 25, 56, 0.35);
     
     --text-main: #f3f4f6;

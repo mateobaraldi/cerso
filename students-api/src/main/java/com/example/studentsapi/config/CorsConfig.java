@@ -9,7 +9,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins( "https://cerso-2.onrender.com/api/students", "https://mateobaraldi.github.io/cerso/")
+                .allowedOrigins( "https://cerso-2.onrender.com/api/students", "https://mateobaraldi.github.io/cerso")
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
     }
 }
